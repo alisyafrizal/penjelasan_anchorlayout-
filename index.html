@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kode Kivy - AnchorLayout</title>
+  <style>
+    pre {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Kode Python (Kivy - AnchorLayout)</h2>
+
+  <pre>
+#anchorlayout  
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.anchorlayout import AnchorLayout
+
+class MyApp(App):
+    def build(self):
+        a_layout = AnchorLayout(anchor_x='center', anchor_y='center')
+        
+        btn = Button(text='Alisyafrizal')
+        btn.size_hint = (0.2, 0.2)
+        
+        a_layout.add_widget(btn)
+        return a_layout
+
+MyApp().run()
+  </pre>
+
+  <h2>🧠 Penjelasan Kode:</h2>
+  <ul>
+    <li><code>from kivy.app import App</code> → Mengimpor kelas utama untuk membuat aplikasi Kivy.</li>
+    <li><code>from kivy.uix.button import Button</code> → Mengimpor widget tombol.</li>
+    <li><code>from kivy.uix.anchorlayout import AnchorLayout</code> → Mengimpor layout yang bisa menempatkan widget berdasarkan posisi (center, top, dll).</li>
+    <li><code>class MyApp(App):</code> → Mendefinisikan kelas aplikasi utama.</li>
+    <li><code>def build(self):</code> → Fungsi yang akan dipanggil saat aplikasi dijalankan, untuk membangun tampilan.</li>
+    <li><code>a_layout = AnchorLayout(anchor_x='center', anchor_y='center')</code> → Membuat layout yang meletakkan widget di tengah layar.</li>
+    <li><code>btn = Button(text='Alisyafrizal')</code> → Membuat tombol dengan label "Alisyafrizal".</li>
+    <li><code>btn.size_hint = (0.2, 0.2)</code> → Ukuran tombol diset 20% dari lebar dan tinggi layout.</li>
+    <li><code>a_layout.add_widget(btn)</code> → Menambahkan tombol ke dalam layout.</li>
+    <li><code>return a_layout</code> → Mengembalikan layout sebagai tampilan utama.</li>
+    <li><code>MyApp().run()</code> → Menjalankan aplikasi.</li>
+  </ul>
+  <ul>
+    <img src="gambar1.jpeg" atl="hasil">
+  </ul>
+</body>
+</html>
